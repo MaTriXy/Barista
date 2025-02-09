@@ -6,7 +6,7 @@
   <string name="hello_world">Hello world!</string>
   <string name="repeated">Repeated</string>
   <string name="im_invisible">I\'m invisible!</string>
-  <string name="unknown">Unknown</string>
+  <string name="not_exists">Not exists</string>
   <string name="enabled_button">Enabled button</string>
   <string name="disabled_button">Disabled button</string>
   <string name="centered_edittext">I\'m a centered edittext!</string>
@@ -18,4 +18,34 @@
   <string name="refreshing">I am refreshing!</string>
   <string name="edittext_with_focus">EditText with focus</string>
   <string name="edittext_with_no_focus">EditText with no focus</string>
+  <string name="button_close_activity">Close activity</string>
+
+  <string name="hintanderror_inputlayout_hint">TextInputLayout hint</string>
+  <string name="hintanderror_inputlayout_error">TextInputLayout error</string>
+  <string name="hintanderror_inputedittext_hint">TextInputEditText hint</string>
+  <string name="hintanderror_inputedittext_error">TextInputEditText error</string>
+  <string name="hintanderror_edittext_hint">EditText hint</string>
+  <string name="hintanderror_edittext_error">EditText error</string>
+
+  <string name="text_helper_hint">TextInputLayout text helper hint</string>
+  <string name="text_helper_text">This is a sample helper text</string>
+
+  <string name="avocado">Avocado</string>
+  <string name="bilberry">Bilberry</string>
+  <string name="tamarind">Tamarind</string>
+  <string name="dragonfruit">Dragonfruit</string>
+
+  <string name="not_there">NotThere</string>
+  <string name="missing">Missing</string>
+  <string name="this_text_must_not_be_displayed">This text must not be displayed on the view</string>
+  <string name="enabled">Enabled</string>
+  <string name="unexising_text">unexisting text</string>
+
+
+  <string name="content_description_image_color_blue">Image color blue</string>
+  <string name="content_description_text_blue">Text blue</string>
+
+  <string name="content_description_image_color_green">Image color green</string>
+  <string name="content_description_text_green">Text green</string>
+
 </resources>

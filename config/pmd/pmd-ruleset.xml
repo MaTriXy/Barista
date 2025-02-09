@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ruleset name="FINN Rules"
-             xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
-        	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        	 xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
   <description>FINN ruleset - tweaked for PMD 5.0.2 and for running on tests, too.</description>
   <rule ref="rulesets/java/unnecessary.xml/UnusedNullCheckInEquals">
     <priority>3</priority>
@@ -97,14 +97,14 @@
   <rule ref="rulesets/java/unnecessary.xml/UselessOverridingMethod">
     <priority>3</priority>
   </rule>
-  <rule ref="rulesets/java/unusedcode.xml/UnusedModifier">
+  <rule ref="rulesets/java/unnecessary.xml/UnnecessaryModifier">
     <priority>5</priority>
   </rule>
-<!-- Using RxJava we do use exceptions as Error and we don't need to do this
-  <rule ref="rulesets/java/design.xml/PreserveStackTrace">
-    <priority>3</priority>
-  </rule>
--->
+  <!-- Using RxJava we do use exceptions as Error and we don't need to do this
+    <rule ref="rulesets/java/design.xml/PreserveStackTrace">
+      <priority>3</priority>
+    </rule>
+  -->
   <rule ref="rulesets/java/optimizations.xml/UseArraysAsList">
     <priority>3</priority>
   </rule>
@@ -167,7 +167,7 @@
   <rule ref="rulesets/java/codesize.xml/NcssMethodCount">
     <priority>3</priority>
     <properties>
-      <property name="minimum" value="50" />
+      <property name="minimum" value="50"/>
     </properties>
   </rule>
   <rule ref="rulesets/java/logging-java.xml/AvoidPrintStackTrace">
@@ -182,7 +182,7 @@
   <rule ref="rulesets/java/codesize.xml/NcssTypeCount">
     <priority>3</priority>
     <properties>
-      <property name="minimum" value="800" />
+      <property name="minimum" value="800"/>
     </properties>
   </rule>
   <rule ref="rulesets/java/design.xml/AvoidInstanceofChecksInCatchClause">
@@ -230,7 +230,8 @@
   <rule ref="rulesets/java/strictexception.xml/SignatureDeclareThrowsException">
     <priority>3</priority>
     <properties>
-      <property name="violationSuppressXPath" value="//MethodDeclaration[../Annotation/MarkerAnnotation/Name[@Image='Test' or @Image='Before' or @Image='After' or @Image='BeforeClass' or @Image='AfterClass']]"/>
+      <property name="violationSuppressXPath"
+                value="//MethodDeclaration[../Annotation/MarkerAnnotation/Name[@Image='Test' or @Image='Before' or @Image='After' or @Image='BeforeClass' or @Image='AfterClass']]"/>
     </properties>
   </rule>
   <rule ref="rulesets/java/finalizers.xml/EmptyFinalizer">
@@ -280,38 +281,10 @@
   <rule ref="rulesets/java/codesize.xml/ExcessiveMethodLength">
     <priority>3</priority>
     <properties>
-      <property name="minimum" value="100" />
+      <property name="minimum" value="100"/>
     </properties>
   </rule>
   <rule ref="rulesets/java/basic.xml/DoubleCheckedLocking">
     <priority>3</priority>
   </rule>
-  <!--
-  <rule name="UseApisFromJDK8" message="Please use the new API in Java 8" class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
-    <description>Please use the new API in Java 8</description>
-    <priority>1</priority>
-    <properties>
-      <property name="xpath">
-        <value><![CDATA[//../ClassOrInterfaceType[
-          typeof(@Image, 'java.util.Date')
-          or
-          typeof(@Image, 'java.util.Calendar')
-          or
-          typeof(@Image, 'java.text.SimpleDateFormat')
-          or
-          typeof(@Image, 'com.google.common.base.Optional')
-        ]]]></value>
-      </property>
-    </properties>
-    <example>
-      <![CDATA[
-    	import java.util.Date; //is bad
-    	import java.time.ZonedDateTime; //is better
-    	import com.google.common.base.Optional; //is bad
-    	import java.util.Optional; // is better
-    ]]>
-    </example>
-  </rule>
-  -->
 </ruleset>
-

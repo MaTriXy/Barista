@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+    >
 
   <TextView
       android:id="@+id/visible_view"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="@string/hello_world"/>
+      android:tag="presentTagValue"
+      android:text="@string/hello_world"
+      />
   <TextView
       android:id="@+id/repeated_view_1_gone"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:visibility="gone"
+      android:tag="presentTagValueHidden"
       android:text="@string/repeated"
       />
   <TextView
@@ -34,14 +39,16 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="@string/im_invisible"
-      android:visibility="invisible"/>
+      android:visibility="invisible"
+      />
 
   <TextView
       android:id="@+id/gone_view"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="I'm hidden!"
-      android:visibility="gone"/>
+      android:visibility="gone"
+      />
 
   <CheckBox
       android:id="@+id/checked_checkbox"
@@ -63,20 +70,26 @@
       android:id="@+id/enabled_button"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="@string/enabled_button"/>
+      android:text="@string/enabled_button"
+      android:clickable="true"
+      android:focusable="true"
+      />
 
   <Button
       android:id="@+id/disabled_button"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:enabled="false"
-      android:text="@string/disabled_button"/>
+      android:clickable="false"
+      android:text="@string/disabled_button"
+      />
 
   <Button
       android:id="@+id/button"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="The last button"/>
+      android:text="The last button"
+      />
 
   <ImageView
       android:id="@+id/image_view"
@@ -85,17 +98,38 @@
       android:src="@drawable/ic_barista"
       />
 
+  <ImageView
+      android:id="@+id/vector_image_view"
+      android:layout_width="56dp"
+      android:layout_height="56dp"
+      app:srcCompat="@drawable/barista_logo_vector"
+      />
+
+  <ImageView
+      android:id="@+id/no_drawable_image"
+      android:layout_width="56dp"
+      android:layout_height="56dp"
+      />
+
+  <ImageView
+      android:id="@+id/code_vector_image_view"
+      android:layout_width="56dp"
+      android:layout_height="56dp"
+      />
+
   <EditText
       android:id="@+id/edittext_with_focus"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="@string/edittext_with_focus"/>
+      android:text="@string/edittext_with_focus"
+      />
 
   <EditText
       android:id="@+id/edittext_without_focus"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="@string/edittext_with_no_focus"/>
+      android:text="@string/edittext_with_no_focus"
+      />
 
   <ImageView
       android:id="@+id/image_view_without_image"
@@ -104,15 +138,36 @@
       />
 
   <View
-      android:id="@+id/view_with_backbround"
+      android:id="@+id/view_with_drawable_background"
       android:layout_width="48dp"
       android:layout_height="48dp"
       android:background="@drawable/ic_barista"
       />
 
   <View
-      android:id="@+id/view_without_backbround"
+      android:id="@+id/view_with_gradient_drawable_background"
       android:layout_width="48dp"
       android:layout_height="48dp"
+      android:background="@drawable/gradient_drawable"
+      />
+
+  <View
+      android:id="@+id/view_with_color_background"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:background="@color/red"
+      />
+
+  <View
+      android:id="@+id/view_without_background"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      />
+
+  <com.google.android.material.button.MaterialButton
+      android:id="@+id/material_button_view"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:icon="@drawable/ic_barista"
       />
 </LinearLayout>
